@@ -30,4 +30,4 @@ jobs:
           build-args: |
             ADDITIONAL_LOCALES=ru_RU
           push: true
-          tags: ktsstudio/zalando-spilo-custom:${{ env.TAG }}
+          tags: ghcr.io/ktsstudio/zalando-spilo-custom:${{ env.TAG }}
