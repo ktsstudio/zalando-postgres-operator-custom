@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'zalando/spilo'
-          ref: ${TAG}
+          ref: ${{ env.TAG }}
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
@@ -27,5 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: postgres-appliance
+          build-args: |
+            ADDITIONAL_LOCALES=ru_RU
           push: true
-          tags: ktsstudio/zalando-spilo-custom:${TAG}
+          tags: ktsstudio/zalando-spilo-custom:${{ env.TAG }}
