@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: 'https://github.com/zalando/spilo'
+          repository: 'zalando/spilo'
           ref: 2.1-p4
 
       - name: Build and push
